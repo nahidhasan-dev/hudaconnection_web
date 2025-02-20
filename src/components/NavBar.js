@@ -28,13 +28,13 @@ export default function NavBar() {
     return (
         <div className={`border-[1px] rounded-lg border-gray-200 sticky top-0 w-full backdrop-blur-lg transition-all duration-300 ${isScrolled ? "bg-white/30" : "bg-white"
             }`}>
-            <div className="xsm:flex sm:flex lg:hidden xlg:hidden xxl:hidden 2xl:hidden p-1 items-center justify-between">
+            <div className="flex lg:hidden xl:hidden xxl:hidden 2xl:hidden p-1 items-center justify-between w-full">
                 <FontAwesomeIcon icon={faBarsStaggered} className="pl-2 text-iconColor cursor-pointer" />
                 <Link href="/" className="flex items-center gap-2 p-2 rounded-full hover:bg-background">
                     <ImageComponents path="/icons/huda_connection_logo_tranparent.png" alt="huda connection logo" w={50} h={50} />
                     <span className="text-iconColor font-bold">Huda Connection</span>
                 </Link>
-                <div className="m-2 p-2 w-10 h-10 flex justify-center items-center rounded-full bg-gray-100">
+                <div className="m-2 p-2 w-10 h-10 rounded-full bg-gray-100">
                     <FontAwesomeIcon icon={faSearch} width={22} className="text-gray-400 cursor-pointer " />
                 </div>
             </div>
