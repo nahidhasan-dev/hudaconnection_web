@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsisVertical, faMoneyCheckDollar, faSackDollar, faRectangleAd, faStore, faMoon, faBell, faGear, faCircleQuestion, faUserShield, faFileContract, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faXmark, faEllipsisVertical, faMoneyCheckDollar, faSackDollar, faRectangleAd, faStore, faMoon, faBell, faGear, faCircleQuestion, faUserShield, faFileContract, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
 const menulink = [
     {
@@ -72,19 +72,23 @@ const menulink = [
     },
 ];
 
-export default function LeftBar() {
+export default function LeftBar({ closeSidebar }) {
     return (
         <div className="h-screen sticky top-0 flex flex-col justify-between pt-2 pb-4 ">
             <div className="flex flex-col gap-4 text-base items-center xl:items-start">
-                <Link href="/" className="flex items-center gap-2 p-2 rounded-full hover:bg-background">
-                    <Image src="/icons/huda_connection_logo_tranparent.png" alt="huda connection logo" width={50} height={50} />
-                    <span className="hidden xl:inline text-iconColor font-bold">Huda Connection</span>
-                </Link>
+
+                <div className="flex justify-between items-center">
+                    <Link href="/" className="flex items-center gap-2 p-2 rounded-full hover:bg-background">
+                        <Image src="/icons/huda_connection_logo_tranparent.png" alt="huda connection logo" width={50} height={50} />
+                        <span className="hidden xsm:inline sm:inline md:inline xl:inline text-iconColor font-bold">Huda Connection</span>
+                    </Link>
+                    <FontAwesomeIcon icon={faXmark} className="hidden xsm:inline sm:inline md:inline text-gray-600 cursor-pointer" onClick={closeSidebar} width={22} height={22} />
+                </div>
                 <div className="flex flex-col gap-3">
                     {menulink.map(item => (
                         <Link href={item.link} className="flex items-center gap-4 p-2 rounded-full hover:bg-background focus:bg-background active:bg-background" key={item.id}>
                             <FontAwesomeIcon icon={item.icon} width={20} className="text-iconColor" />
-                            <span className="hidden xl:inline">{item.name}</span>
+                            <span className="hidden xsm:inline sm:inline md:inline xl:inline">{item.name}</span>
                         </Link>
                     ))}
                 </div>
