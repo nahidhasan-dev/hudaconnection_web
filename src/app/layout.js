@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no" />
         <meta name="title" content="Huda Connection" />
         <meta name="description" content="A platform to connect and share Islamic knowledge with the world." />
         <meta name="keywords" content="Islam, Muslim Community, Quran, Hadith, Islamic Knowledge, Religion, Mahfil" />
