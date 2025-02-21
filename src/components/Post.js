@@ -14,12 +14,12 @@ export default function Post() {
                         <div className=" flex flex-col">
                             <div className="flex items-center gap-1">
                                 <p className="font-bold text-gray-600">Md. Nahid Hasan</p>
-                                <Image src={"/icons/verified-solid.svg"} width={18} height={18} alt={"verified icon"} />
+                                <Image src={"/icons/verified.svg"} width={18} height={18} alt={"verified icon"} />
                             </div>
                             <div className="flex items-center gap-2 text-gray-400">
-                                <p>@nahid-hasan</p>
+                                <p className="text-sm">@nahid-hasan</p>
                                 <div className="bg-gray-400 rounded-full w-1 h-1"></div>
-                                <p>1 day ago</p>
+                                <p className="text-sm">1 day ago</p>
                             </div>
                         </div>
                         <p className="font-bold text-gray-400 cursor-pointer">...</p>
@@ -36,10 +36,10 @@ export default function Post() {
 
                 <div className="border-b-[1px] border-gray-200 mx-2"></div>
                 <div className="px-2 py-3 flex justify-evenly">
-                    <ReactionButton initialCount={120} icon={faHeart} />
-                    <ReactionButton initialCount={120} icon={faComment} />
-                    <ReactionButton initialCount={120} icon={faShare} />
-                    <ReactionButton initialCount={120} icon={faRepeat} />
+                    <ReactionButton initialCount={120} icon={faHeart} title={"React"} />
+                    <ReactionButton initialCount={120} icon={faComment} title={"Comment"} />
+                    <ReactionButton initialCount={120} icon={faShare} title={"Share"} />
+                    <ReactionButton initialCount={120} icon={faRepeat} title={"Repost"} />
                 </div>
             </div>
         </div>

@@ -28,8 +28,9 @@ export default function NavBar() {
     return (
         <div className={`border-[1px] rounded-lg border-gray-200 sticky top-0 w-full backdrop-blur-lg transition-all duration-300 ${isScrolled ? "bg-white/30" : "bg-white"
             }`}>
+
             <div className="flex lg:hidden xl:hidden xxl:hidden 2xl:hidden p-1 items-center justify-between w-full">
-                <FontAwesomeIcon icon={faBarsStaggered} className="pl-2 text-iconColor cursor-pointer" />
+                <FontAwesomeIcon icon={faBarsStaggered} className="pl-2 text-iconColor cursor-pointer" width={22} height={22} />
                 <Link href="/" className="flex items-center gap-2 p-2 rounded-full hover:bg-background">
                     <ImageComponents path="/icons/huda_connection_logo_tranparent.png" alt="huda connection logo" w={50} h={50} />
                     <span className="text-iconColor font-bold">Huda Connection</span>
@@ -38,6 +39,7 @@ export default function NavBar() {
                     <FontAwesomeIcon icon={faSearch} width={22} className="text-gray-400 cursor-pointer " />
                 </div>
             </div>
+
             <div className="p-1 flex justify-between">
                 {menulink.map(item => (
                     <Link
